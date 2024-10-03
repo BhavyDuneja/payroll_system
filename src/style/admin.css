@@ -1,0 +1,45 @@
+/* src/components/AdminPanel.css */
+.admin-panel {
+    display: flex;
+}
+
+.sidebar {
+    width: 33%;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
