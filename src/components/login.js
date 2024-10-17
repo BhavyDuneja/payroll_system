@@ -17,8 +17,8 @@ const Login = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include',
-        body: JSON.stringify({ username, password, remember }),
+        credentials: 'include', // Allows cookies/session
+        body: JSON.stringify({ identifier: username, password, remember }), // Use identifier instead of username
       });
   
       if (response.ok) {
@@ -46,6 +46,7 @@ const Login = () => {
       setError('An error occurred during login. Please try again.');
     }
   };
+  
 
   return (
     <div className="login-container">
